@@ -34,22 +34,25 @@ Additionally, **password hashing** is done using **bcrypt** for security, and **
 
 ## Docker Setup Instructions
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/WilsonnnTan/Kuasar-BackEnd.git
-   cd Kuasar-BackEnd
-   ```
+### 1. Clone the Repository
 
-## 2. Set up Environment Variables
+First, clone the repository and navigate into the project directory:
+
+```bash
+git clone https://github.com/WilsonnnTan/Kuasar-BackEnd.git
+cd Kuasar-BackEnd
+```
+
+### 2. Set up Environment Variables
 
 Before building the Docker containers, you'll need to configure the environment variables.
 
-1. **Create a `.env` file** in the root of your project directory (same level as `docker-compose.yml` and `Dockerfile`).
+1. **Rename `.env.example` to `.env` file** in the root of your project directory (same level as `docker-compose.yml` and `Dockerfile`).
    
 2. **Populate the `.env` file** with the following content:
 
 ```env
-# Database Configuration
+# Database Configuration (Change according to your PostgreSQL Credentials)
 DATABASE_URL=postgresql://postgres:password@db:5432/mydb
 
 # JWT Configuration
@@ -63,7 +66,7 @@ POSTGRES_PASSWORD=password
 POSTGRES_DB=mydb
 ```
 
-#### Generate Secret Key
+3. **Generate Secret Key**
 
 To generate a secure `SECRET_KEY` for your application, follow these steps:
 
@@ -92,3 +95,18 @@ After setting up the environment variables, you can build the Docker containers 
 docker-compose up --build
 ```
 
+### 4. Start the Docker Containers
+
+Once the containers are built, they should automatically start. If they're not running, you can manually start them with the following command:
+
+```bash
+docker-compose up
+```
+
+### 5. Visit the Application
+
+Now that your containers are running, you can access the FastAPI application by visiting:
+
+```bash
+http://localhost:8000
+```
