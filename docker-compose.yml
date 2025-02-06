@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  # Application service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Dockerfile for FastAPI application
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"  # Expose FastAPI application on port 8000
+    environment:
+      - DATABASE_URL=${DATABASE_URL}  # Pull the DATABASE_URL from the .env file
+      - SECRET_KEY=${SECRET_KEY}      # Pull the SECRET_KEY from the .env file
+      - ALGORITHM=${ALGORITHM}        # Pull the ALGORITHM from the .env file
+      - ACCESS_TOKEN_EXPIRE_MINUTES=${ACCESS_TOKEN_EXPIRE_MINUTES}  # Pull the expiration time for access tokens
+    depends_on:
+      - db  # Ensure the database service starts before the app
+
+  # Database service (PostgreSQL)
+  db:
+    image: postgres:13  # Use official PostgreSQL image
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}         # Use POSTGRES_USER from the .env file
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # Use POSTGRES_PASSWORD from the .env file
+      POSTGRES_DB: ${POSTGRES_DB}             # Use POSTGRES_DB from the .env file
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistent data storage
+
+volumes:
+  postgres_data:  # Create a named volume to persist database data
