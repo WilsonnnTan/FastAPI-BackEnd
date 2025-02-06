@@ -92,7 +92,7 @@ To generate a secure `SECRET_KEY` for your application, follow these steps:
 After setting up the environment variables, navigate to the `Root Project directory` and build the Docker containers by running the following command:
 
 ```bash
-docker-compose -f Docker/docker-compose.yml up --build
+docker-compose up --build
 ```
 
 ### 4. Start the Docker Containers
@@ -100,7 +100,7 @@ docker-compose -f Docker/docker-compose.yml up --build
 Once the containers are built, they should automatically start. If they're not running, you can manually start them with the following command:
 
 ```bash
-docker-compose -f Docker/docker-compose.yml up
+docker-compose up
 ```
 
 ### 5. Visit the Application
