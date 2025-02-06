@@ -33,7 +33,7 @@ Additionally, **password hashing** is done using **bcrypt** for security, and **
 
 ---
 
-## Docker Setup Instructions
+## Docker Setup Instructions (Development Mode)
 
 ### 1. Clone the Repository
 
