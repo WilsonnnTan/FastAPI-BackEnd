@@ -63,7 +63,7 @@ POSTGRES_PASSWORD=password
 POSTGRES_DB=mydb
 ```
 
-## Generate Secret Key
+#### Generate Secret Key
 
 To generate a secure `SECRET_KEY` for your application, follow these steps:
 
