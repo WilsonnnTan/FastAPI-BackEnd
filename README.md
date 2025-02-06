@@ -63,6 +63,27 @@ POSTGRES_PASSWORD=password
 POSTGRES_DB=mydb
 ```
 
+## Generate Secret Key
+
+To generate a secure `SECRET_KEY` for your application, follow these steps:
+
+1. Open your terminal or command prompt.
+
+2. Run the following command to generate a random 64-character hexadecimal string:
+
+    ```bash
+    openssl rand -hex 32
+    ```
+
+3. The command will output a string like this:
+
+    ```
+    b2a32fda67d945bb317d44fcb76b320fc9a201d2e4ef623fb6174a2079bcd038
+    ```
+
+4. Copy the generated string and replace the `secretkey` placeholder in your `.env` file with the string.
+
+
 ### 3. Build the Docker containers
 
 After setting up the environment variables, you can build the Docker containers by running the following command:
