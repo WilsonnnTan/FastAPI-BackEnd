@@ -26,7 +26,6 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD} # Use POSTGRES_PASSWORD from the .env file
       POSTGRES_DB: ${POSTGRES_DB}             # Use POSTGRES_DB from the .env file
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - postgres_data:/var/lib/postgresql/data  # Persistent data storage
 
 volumes:
