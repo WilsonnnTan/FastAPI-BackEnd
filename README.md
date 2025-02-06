@@ -27,7 +27,7 @@ Additionally, **password hashing** is done using **bcrypt** for security, and **
 - **SQLAlchemy**: ORM for database interactions.
 - **PostgreSQL**: The database for storing user data.
 - **Bcrypt**: Library for secure password hashing.
-- **PyJWT**: For encoding and decoding JSON Web Tokens.
+- **Python-Jose**: For encoding and decoding JSON Web Tokens.
 - **Docker**: To containerize the application and database.
 
 ---
