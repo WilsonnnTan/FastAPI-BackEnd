@@ -1,40 +1,12 @@
-# FastAPI is the core framework for building the REST API.
-# It provides easy-to-use features for building APIs with automatic validation and performance.
 fastapi
-
-# Uvicorn is an ASGI server for serving FastAPI applications.
-# It is highly performant and supports asynchronous programming.
 uvicorn
-
-# SQLAlchemy is the ORM for interacting with the database.
-# It allows you to define your database tables as Python classes and abstracts raw SQL.
 sqlalchemy
-
-# psycopg2 is the PostgreSQL adapter for Python.
-# It is necessary for FastAPI to connect to a PostgreSQL database and execute SQL queries.
+psycopg2-binary==2.9.10
 psycopg2
-
-# python-jose is used for handling JSON Web Tokens (JWT).
-# It's necessary for creating and verifying JWTs used for authentication and authorization.
 python-jose
-
-# bcrypt is a password-hashing algorithm used to securely hash user passwords.
-# It makes the process slow and resistant to brute-force attacks.
 bcrypt
-
-# passlib is a password hashing library that supports multiple algorithms including bcrypt.
-# It simplifies password hashing and verification.
 passlib
-
-# Pydantic is used for data validation and settings management.
-# It's used by FastAPI for validating request and response data.
 pydantic
-
-# Alembic is a database migration tool for managing schema changes over time.
-# It is used with SQLAlchemy to track database changes and migrations.
 alembic
-
-# python-dotenv is used to load environment variables from a .env file.
-# It helps manage sensitive configuration like API keys and database credentials.
 python-dotenv
-
+python-multipart
