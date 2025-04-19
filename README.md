@@ -40,8 +40,8 @@ Additionally, **password hashing** is done using **bcrypt** for security, and **
 First, clone the repository and navigate into the project directory:
 
 ```bash
-git clone https://github.com/WilsonnnTan/Kuasar-BackEnd.git
-cd Kuasar-BackEnd
+git clone https://github.com/WilsonnnTan/FastAPI-BackEnd.git
+cd FastAPI-BackEnd
 ```
 
 ### 2. Set up Environment Variables
